@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: wheat;
+}
+
+body {
+  margin: 0;
+  background-color: linen;
+  font-family: sans-serif;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: azure;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid;
+}
