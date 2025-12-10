@@ -11,6 +11,9 @@ body {
   margin: 0;
   background-color: linen;
   font-family: sans-serif;
+  text-align: center;
+  padding: 80px;
+  font-size: 20px;
 }
 .logo {
   font-size: 24px;
@@ -29,4 +32,15 @@ section {
   font-weight: bold;
   text-align: center;
   border: 2px solid;
+}
+span {
+  color: red;
+
+}
+.text {
+  font-size: 30px;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
 }
