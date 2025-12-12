@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>입력태그 - input</title>
+  </head>
+  <!-- 로그인,회원가입 페이지에 주로 사용 -->
+  <!-- 프론트엔드(웹브라우저)에서 서버(백엔드)로 정보 전송 방법 -->
+  <!-- 1.form태그로 -->
+  <!-- 2.자바스크립트로 -->
+  <body style="margin: 0">
+    <div style="
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;">
+    <div
+      style="
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: solid 2px;
+        border-radius: 33px;
+        width: 300px;
+        padding: 0 10px;
+      "
+    >
+      <!-- action속성: 서버주소를 넣는다. -->
+      <form action="https://www.naver.com/"></form>
+      <!-- localhost : 내PC주소를 의미하는 예약어 -->
+      <!-- 8080: port(포트)이름 - 프롬프트 구분자 -->
+      <!-- method:메소드 통신방식 get/post-->
+      <form action="localhost:8080" method="get"></form>
+      <h1 style="color: chartreuse">NAVER</h1>
+      <!-- input태그: 사용자의 입력을 받는 태그 -->
+      <!-- text속성은 어떠한 문자(숫자,영어,기호 등등)라도 입력할 수 있다. -->
+      <!-- password속성은 입력한 글자를 ・・・로 표기되어 가린다. -->
+      <!-- file속성은  -->
+      <div>아이디<input type="text" placeholder="아이디를 입력하라!" /></div>
+      <div>
+        비밀번호 <input type="password" placeholder="비밀번호를 입력하라!" />
+      </div>
+      <div>파일업로드:<input type="file" /><br /></div>
+      <div>제출하기<input type="submit" /></div>
+      <button
+        style="
+          border: none;
+          background-color: green;
+          color: white;
+          width: 100px;
+          padding: 10px;
+        "
+      >
+        로그인
+      </button>
+    </div>
+    </div>
+  </body>
+</html>

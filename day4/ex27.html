@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>시멘틱 태그</title>
+    <!-- HTML5 시멘틱(Semantic) : 의미론적 태그 -->
+    <!-- 웹사이트의 공통적인 공간 구성요소를 태그형식으로 분류 -->
+    <!-- 공통적인 구성요소 : 헤더(탑), 메인(섹션), 사이드바, 푸터 -->
+    <!-- 사용하는 이유: 유지 보수가 쉽다. 이해하기 쉽다. 검색엔진 잘 노출된다. -->
+    <!-- header태그 상위공간 (헤더) -->
+    <!-- nav태그 네비게이션(메뉴)-->
+    <!-- aside태그 사이드(왼쪽,오른쪽)공간 -->
+    <!-- section태그 주된 내용을 담는 공간 -->
+    <!-- article태그 섹션안에서 글자를 주로 담는 공간 -->
+    <!-- footer태그  바닥공간 -->
+    <!-- main태그 section + aside -->
+    <!-- 모든 시멘틱 태그는 block속성이다. div로 대체가 가능하다. -->
+    <!-- ----------------- -->
+    <!-- |   Header(Top)   | -->
+    <!-- ----------------- -->
+    <!-- |        Nav      | -->
+    <!-- -----------------      -->
+    <!-- |      |          |      -->
+    <!-- |Aside | Section  | Main -->
+    <!-- |      |          |      -->
+    <!-- ----------------- -->
+    <!-- |      Footer     | -->
+    <!-- ----------------- -->
+    <style>
+      body {
+        margin: 0;
+        border: solid 5px gold;
+        /*  */
+        /* block속성을 inline속성으로 바꾸기 */
+        /* 1.display속성을 inline으로 바꾸기 */
+        /* 2.float속성으로 left,right값 사용하기 */
+        justify-content: s;
+      }
+      header {
+        border: solid 5px;
+      }
+      nav {
+        border: solid 5px cyan;
+      }
+      main {
+        border: solid 5px lightcoral;
+      }
+      aside {
+        border: solid 5px lightgreen;
+        display: inline;
+        float: left;
+        /* float : inline으로 변경하고,왼쪽으로 배치 */
+        width: 15%;
+      }
+      section {
+        border: solid 5px red;
+        display: inline;
+        float: right;
+        /* float : inline으로 변경하고,오른쪽으로 배치 */
+        width: 80%;
+        /* width : 부모태그(main)의 가용너비의 80%을 차지 */
+      }
+      footer {
+        border: solid 5px magenta;
+        /* clear : float속성을 초기화, both : left,right 둘다 */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>헤더영역 타이틀</h1></header>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴1</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside>
+        <ul>
+          <li><a href="#">사이드 메뉴1</a></li>
+          <li><a href="#">사이드 메뉴2</a></li>
+          <li><a href="#">사이드 메뉴3</a></li>
+        </ul>
+      </aside>
+      <section>
+        <article>
+          <h3>내용1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            alias mollitia vel, magnam quae suscipit animi? Magnam maxime
+            impedit, reiciendis perspiciatis laboriosam cupiditate sapiente
+            iste, voluptatem repellendus blanditiis quisquam delectus.
+          </p>
+        </article>
+        <article>
+          <h3>내용2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            alias mollitia vel, magnam quae suscipit animi? Magnam maxime
+            impedit, reiciendis perspiciatis laboriosam cupiditate sapiente
+            iste, voluptatem repellendus blanditiis quisquam delectus.
+          </p>
+        </article>
+        <article>
+          <h3>내용3</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            alias mollitia vel, magnam quae suscipit animi? Magnam maxime
+            impedit, reiciendis perspiciatis laboriosam cupiditate sapiente
+            iste, voluptatem repellendus blanditiis quisquam delectus.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>한국소프트웨어 인재개발원</footer>
+  </body>
+</html>
