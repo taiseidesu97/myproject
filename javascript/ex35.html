@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      // 1번문제
+      let 영희 = 0;
+      let 철수 = 0;
+      for (let i = 0; i < 5; i++) {
+        let dice = Math.floor(Math.random() * 6) + 1;
+        if (dice > 영희) {
+          영희 = dice;
+        }
+      }
+      for (let i = 0; i < 5; i++) {
+        let dice = Math.floor(Math.random() * 6) + 1;
+        if (dice > 철수) {
+          철수 = dice;
+        }
+      }
+      console.log("철수는" + 철수);
+      console.log("영희는" + 영희);
+      if (철수 > 영희) {
+        console.log("철수의 승" + 철수);
+      } else if (영희 > 철수) {
+        console.log("영희의승" + 영희);
+      } else {
+        console.log("무승부");
+      }
+
+      //2번 문제
+      male_dice_max = 0;
+      male_dice_min = 100;
+      for (let i = 0; i < 5; i++) {
+        let dice = Math.floor(Math.random() * 6) + 1;
+
+        if (dice > male_dice_max) {
+          male_dice_max = dice;
+        }
+        if (dice < male_dice_min) {
+          male_dice_min = dice;
+        }
+      }
+      let male = male_dice_max * 10 + male_dice_min;
+      console.log("철수의 가장 큰수" + male_dice_max);
+      console.log("철수의 가장 작은 수" + male_dice_min);
+      console.log("철수의 총합은:" + male);
+
+      female_dice_max = 0;
+      female_dice_min = 100;
+      for (let i = 0; i < 5; i++) {
+        let second_dice = Math.floor(Math.random() * 6) + 1;
+
+        if (second_dice > female_dice_max) {
+          female_dice_max = second_dice;
+        }
+        if (second_dice < male_dice_min) {
+          female_dice_min = second_dice;
+        }
+      }
+      let female = female_dice_max * 10 + female_dice_min;
+      console.log("영희의 가장 큰수" + female_dice_max);
+      console.log("영희의 가장 작은 수" + female_dice_min);
+      console.log("영희의 총합은:" + female);
+      if (male > female) {
+        console.log("철수의 승" + male);
+      } else if (female > male) {
+        console.log("영희의승" + female);
+      } else {
+        console.log("무승부");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

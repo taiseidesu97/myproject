@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜덤값 발생하기</title>
+    <script>
+      //Random 수(임의의 수, 난수)발생시키기
+      // 뽑기, 주사위, 확률, 무작위로 수를 뽑을 때
+      //   Math.random() : 0.0 ~ 0.999999999999999999999....의 실수값을 반환하는 함수
+      console.log(Math.random());
+
+      //주사위 게임 : 1 ~ 6사이의 임의의 수가 발생!
+      let random = Math.floor(Math.random() * 6) + 1;
+      console.log(random);
+
+      //연습문제
+      //1. 10부터 20사이의 랜덤 정수 하나를 발생시키고
+      //그 수를 출력하고 짝수 이면"짝수임",홀수이면 "홀수임"
+      //출력하시오
+      let quest = Math.floor(Math.random() * 11) + 10;
+      console.log(quest);
+      if (quest % 2 == 0) {
+        console.log("짝수임");
+      } else {
+        console.log("홀수임");
+      }
+      //2.주사위 1개 던져서, 1~3이 아노면 작은수, 4~6이 나오면 "큰수"라고 출력
+      let dice = Math.floor(Math.random() * 6) + 1;
+      console.log(dice);
+
+      if (dice < 4) {
+        console.log("작은수");
+      } else {
+        console.log("큰수");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      //문제 1
+      //1. 영희가 징검다리 게임을 하고 있다.
+      //  1부터 100까지 번호가 쓰여진 돌을 건너는데,
+      // 끝자리가 3으로 끝나는ok
+      let sum = 0;
+      let count = 0;
+      for (let i = 1; i <= 100; i++) {
+        if (i % 10 != 3) {
+          count++;
+          sum = sum + i;
+          console.log(i);
+        }
+      }
+
+      console.log(count);
+      console.log(sum);
+      sum = 0;
+      for (let i = 1; i <= 10; i++) {
+        let dice = Math.floor(Math.random() * 6) + 1;
+        sum = sum + dice;
+        if (dice % 2 == 0) {
+          count++;
+        }
+      }
+      console.log(sum);
+      console.log("짝수" + count);
+    </script>
+  </head>
+  <body></body>
+</html>

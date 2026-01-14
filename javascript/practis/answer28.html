@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대문자만 지나가세요</title>
+    <script>
+      let initial = prompt("");
+      if (
+        initial.charCodeAt(0) >= "A".charCodeAt(0) &&
+        initial.charCodeAt(0) <= "Z".charCodeAt(0)
+      ) {
+        console.log("yes");
+      } else {
+        console.log("no");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

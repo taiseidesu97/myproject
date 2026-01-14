@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무한루프</title>
+    <script>
+      //무한루프 만드는 법
+      //이벤트를 대기하고 있다가 처리하기 위해서 사용한다.
+      //1.for(;;)
+      // 2.while(true)
+      /*let count = 0;
+       for (;;) {
+         console.log(count++);
+         if (count == 50) {
+           break;
+         }
+       }
+       count = 0;
+       while (true) {
+         console.log(count++);
+         if (count > 50) {
+           break;
+         }
+       }*/
+      //연습문제 1
+      while (true) {
+        let j = Math.floor(Math.random() * 6) + 1;
+        console.log(j);
+        if (j == 5) {
+          console.log("大当たり！");
+
+          break;
+        }
+      }
+      //   연습문제2
+      while (true) {
+        let j = Math.floor(Math.random() * 6) + 1;
+        let x = Math.floor(Math.random() * 6) + 1;
+        console.log("철수한번", j);
+        console.log("영희한번", x);
+
+        if (j > x) {
+          console.log("승리");
+          break;
+        } else if (x > j) {
+          console.log("패배");
+        } else {
+          console.log("무승부");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

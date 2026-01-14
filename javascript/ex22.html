@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문</title>
+    <script>
+      //조건문 : 조건식에 따라서 선택적인 수행하는 문장.
+      //형식
+      //if (조건식){
+      // 조건식이 True일때 실행되는 수행문.
+      // false 일때는 실행이 안됨}
+
+      //조건문의 종류 : if문 (70%정도 쓰인다),switch case문(30%정도 쓰인다.)
+      //
+      //
+      let myVar = 20;
+      if (myVar == 20) {
+        console.log("true");
+        document.write("<h3>myBar는 20입니다</h3>");
+      } else {
+        console.log("false");
+      }
+
+      //   1번문제
+      let myNum = 30;
+      document.write("<h3>" + myNum + "</h3>");
+
+      //   2번문제
+      let order = prompt("숫자를 입력하세요");
+      order = Number(order);
+      if (order % 2 == 0) {
+        console.log("짝수입니다.");
+      } else {
+        console.log("홀수입니다");
+      }
+
+      //   3번문제
+      const now = new Date();
+      let hour = now.getHours();
+      if (hour < 12) {
+        console.log("오전입니다");
+      } else {
+        console.log("오후입니다.");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

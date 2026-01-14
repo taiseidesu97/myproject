@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+      //js 중급 문법 : ES6버전부터 - 리액트.js(생성형AI)
+      // 최신 트렌드 문법을 구사해야 AI코드를 이해가능!
+      // 구조분해할당과 전개연산자
+      //   쪼갠다     나열한다
+      // Destructuring Assignment
+      //  spread Operator
+
+      // 배열의 구조분해
+      let array1 = [10, 20, 30];
+      let a = array1[0];
+      let b = array1[1];
+      let c = array1[2]; //이 과정을 간단하게 해보자.
+      let [x, y, z] = [10, 20, 30];
+      console.log(x);
+      let [d] = [10, 20, 30];
+      console.log(d);
+      let [, , e] = [10, 20, 30];
+      console.log(e);
+
+      // 객체의 구조분해(할당)
+      let Obj = {
+        apple: 1000,
+        banana: 2000,
+      };
+      //객체의 key와 변수이름을 매칭해줘야 됨.
+      let { apple, banana } = Obj;
+      console.log(apple);
+      console.log(banana);
+      //새로운 이름으로 할당하기
+      let { apple: fruit1, banana: fruit2 } = Obj;
+      console.log(fruit1);
+      console.log(fruit2);
+
+      //일부만 할당하기
+      let { apple: newFruit } = Obj;
+      console.log(newFruit);
+
+      // 배열의 전개연산자(...)
+      let [i, j, ...rest] = [10, 20, 30, 40, 50];
+      console.log(i); //10
+      console.log(j); // 20
+      console.log(rest); //30,40,50
+
+      //값의 치환
+      let aa = 10;
+      let bb = 20;
+      //   let temp = aa;
+      //   aa = bb;
+      //   bb = temp;
+      [bb, aa] = [aa, bb];
+      console.log(aa);
+      console.log(bb);
+
+      // 객체의 전개연산자
+      let pet = {
+        cat: 1000,
+        dog: 2000,
+        pig: 3000,
+      };
+      let ball = {
+        baseball: 1000,
+        soccer: 2000,
+        basketball: 3000,
+      };
+      let favorit = {
+        ...pet,
+        ...ball,
+      };
+      console.log(favorit);
+
+      //기본값 설정
+      let [n = 5, m = 7] = [, 1];
+      console.log(n, m);
+
+      //함수의 결과값으로 구조분해할당
+      function foo() {
+        return [10, 20];
+      }
+      [n, m] = foo();
+      console.log(n, m);
+    </script>
+  </head>
+  <body></body>
+</html>

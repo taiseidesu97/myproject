@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this</title>
+    <script>
+      //this 예약어 : 객체가 자기 자신의 속성이나 메소드에 접근할 때 사용.
+      // 주의 일반 함수(function)에서는 제대로 동작, 화살표함수에서는
+      // 상위 스코프(Scope)를 지정하기에 주의 요망.
+      //
+      let globalName = "변사또";
+      let person = {
+        name: "홍길동",
+        age: 30,
+        introduce: function () {
+          console.log("제 이름은 " + this.name + "입니다.");
+        },
+        greeting: () => {
+          console.log("제 이름은" + globalName + "입니다.");
+        },
+      };
+      person.introduce();
+      person.greeting();
+      p
+      //생성자함수 - 함수가 호출될 때 자동으로 호출되는 함수
+    </script>
+  </head>
+  <body></body>
+</html>

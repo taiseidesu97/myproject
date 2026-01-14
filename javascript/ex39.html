@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이중 반복문</title>
+    <script>
+      // 구구단 출력
+      for (let i = 2; i < 10; i++) {
+        console.log(i + " 단은");
+        for (let j = 1; j < 10; j++) {
+          console.log(`${i}곱하기${j}는: ${i * j}`);
+        }
+      }
+      // 시 분 출력
+      for (let i = 1; i <= 24; i++) {
+        console.log(i + " 시는");
+        for (let j = 1; j <= 60; j++) {
+          console.log(`${i}시${j}분 입니다`);
+        }
+      }
+      // 이중 반복문에서 break,continue사용하기
+      //반복문을 구분하기 위해 레이블을 쓴다.
+      loop1: for (let i = 2; i < 10; i++) {
+        loop2: for (let j = 1; j < 10; j++) {
+          console.log(`${i}곱하기${j}는: ${i * j}`);
+          if (j > 5) {
+            continue loop1;
+          }
+          if (j > 3) {
+            continue loop2;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      //연습문제1
+      //   function double(params) {
+      //     return params * 2;
+      //   }
+      //   console.log(double(10));
+
+      //연습문제2
+      //   function max(x, y, z) {
+      //     if (x > y && x > z) {
+      //       console.log("가장큰수는 " + x);
+      //     } else if (y > x && y > z) {
+      //       console.log("가장큰수는 " + y);
+      //     } else {
+      //       console.log("가장 큰수는 " + z);
+      //     }
+      //   }
+      //   max(Number(prompt()), Number(prompt()), Number(prompt()));
+
+      //   연습문제 2
+        // math.max함수를 사용하면 쉽게 풀 수 있다
+      function max(x, y, z) {
+        let answer = x;
+        if (y > answer) {
+          answer = y;
+        }
+        if (z > answer) {
+          answer = z;
+        }
+        return answer;
+      }
+      console.log(max(Number(prompt()), Number(prompt()), Number(prompt())));
+
+      //연습 문제 3
+      function lucky(j) {
+        if (j == 3 || j == 7) {
+          return "게임에서 졌습니다";
+        } else {
+          return "게임에서 승리했습니다.";
+        }
+      }
+      console.log(lucky(Number(prompt())));
+    </script>
+  </head>
+  <body></body>
+</html>

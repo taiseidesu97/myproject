@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex3 -->
+    <title>최대값, 최소값 구하기</title>
+    <script>
+      // 최대값 구하기 알고리즘(공식)
+      //1. 가장 작은 수를 max값에 넣는다.
+      //2. 모든 수와 max를 비교하고
+      //3. max보다 더 큰 수를 max에 넣는다.
+      //4. 2~3의 과정을 반복한다.
+      //5. 결국 max에는 최대값이 남는다.
+      let max = 0; //가장 작은 값으로 초기화, 반복문 밖에서!
+      for (let i = 0; i < 10; i++) {
+        //3. 이걸 10번 반복
+        let num = Math.floor(Math.random() * 100) + 1; // 1~100
+        console.log(num);
+        if (num > max) {
+          //1.랜덤이 max보다 크면 실행!
+          //비교하는 수가 더 크면, max에 넣는다.
+          max = num; //2.랜덤값 = num이 max에 들어가고 if문에 max에 들어감 즉 랜덤으로 큰 숫자가 나올수록 max에 들어간다
+        }
+      }
+      console.log("최대값", max);
+      //Number.MAX_SAFE_INTEGER
+      let min = 100;
+      for (let i = 0; i < 10; i++) {
+        let num1 = Math.floor(Math.random() * 100) + 1;
+        console.log(num1);
+        if (num1 < min) {
+          min = num1;
+        }
+      }
+      console.log("최소값" + min);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열을 배열로 취급하기</title>
+    <script>
+      //문자열도 내부적으로 배열의 구조를 가지고 있다.
+      //배열처럼 인덱스와 길이가 있다.
+      let str = "안녕하세요";
+      console.log(str[0]);
+      console.log(str);
+      console.log(str.length);
+      //문자열 순회
+      for (let i = 0; i < str.length; i++) {
+        console.log(str[i]);
+      }
+      //문자( Character)가 여러개 모이면, 문자열(String)이다.
+      // 문자 인코딩포*\(유니크 코드표)- 글자르  숫자로 정리한 편이다
+      // 유니클로 첫페이지는 아스키코드.(키보드자판문자,특수기호ㅗ)
+      //한글은 0AC00부터 "가.... "
+
+      //문자(열)을 아스키코드 값(숫자)로 바꾸기 : 파이썬 ord("A")
+      //   console.log("A".charCodeAt(0)); //65
+      //   console.log("Z".charCodeAt(0)); //90
+      //   console.log("a".charCodeAt(0)); //97
+      //   console.log("z".charCodeAt(0)); //122
+      //   console.log("0".charCodeAt(0)); //48
+      //   console.log("9".charCodeAt(0)); //57
+      //숫자(아스키코드 값)를 문자(열)로 바꾸기 : 파이썬 chr(65)
+      console.log(String.fromCharCode(65));
+
+      let arr8 = Array.from("Hello");
+
+      //1번문제
+      if (
+        "G".charCodeAt(0) > "A".charCodeAt(0) &&
+        "G".charCodeAt(0) < "Z".charCodeAt(0)
+      ) {
+        console.log(true);
+      }
+
+      //2번문제
+      let xxx = "hello";
+      for (let i = 0; i < xxx.length; i++) {
+        let answer = String.fromCharCode(xxx[i].charCodeAt(0) - 32);
+        console.log(answer);
+      }
+      //2번 문제 정답
+      let hello = "hello";
+      let HELLO = "";
+      for (let i = 0; i < hello.length; i++) {
+        HELLO += String.fromCharCode(hello[i].charCodeAt(0) - 32);
+      }
+      console.log(HELLO);
+      //3번 문제 정답
+      console.log(
+        "7".charCodeAt(0) -
+          "0".charCodeAt(0) +
+          ("7".charCodeAt(0) - "0".charCodeAt(0))
+      );
+
+      //코드는 반드시 재작성(리펙토링)하면 좋다!
+      //글쓰기 ->초고 -> 다듬기 -> 윤문
+      //중복된 코드 제거 -> 변수이름 알기쉽게 -> 로직 변경
+      // -> 함수로 분리
+
+      //문자열을 배열로 가져오기
+      let arrStr = Array.from("hello");
+      console.log(arrStr);
+
+      //구분자로 문자열분리 후 배열로 만들어 준다.
+      let arrStr2 = "apple,banana,orange".split(",");
+      let arrStr3 = "apple banana orange".split(" ");
+      console.log(arrStr2);
+      console.log(arrStr3);
+      let arrStr4 = "apple".split("");
+      console.log(arrStr4);
+      //전개연산자 ...
+      let arrStr5 = [..."apple"];
+      console.log(arrStr5);
+
+      let str3 = "apple";
+      str3[0] = "c"; //읽기전용이므로  안바뀜
+      console.log(str3);
+      console.log(typeof str3);
+
+      let arrStr1 = Array.from("hello");
+      arrStr1[2] = "D";
+      console.log(arrStr1);
+      console.log(typeof arrStr1);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      //1번문제
+
+      //     while (i < 100) {
+      //       if (i % 2 == 0 && i % 3 == 0) {
+      //         console.log(i);
+      //       }
+      //       i++;
+      //     }
+
+      //2번 문제
+
+      //   while (i < 100) {
+      //     let j = 1;
+      //     let count = 0;
+
+      //     while (j <= i) {
+      //       if (i % j === 0) {
+      //         count++;
+      //       }
+      //       j++;
+      //     }
+
+      //     if (count === 2) {
+      //       console.log(i); // 소수 출력
+      //     }
+
+      //     i++;
+      //   }
+      // i = 1;
+      // while (i < 100) {
+      //   let x = 0;
+      //   let j = 1;
+      //   while (j <= i) {
+      //     if (i % j == 0) {
+      //       x++;
+      //     }
+      //     j++;
+      //   }
+      //   if (x == 2) {
+      //     console.log("소수입니다. ", i);
+      //   }
+      //   i++;
+      // }
+
+      //   while (i < 6) {
+      //     let x = Math.floor(Math.random() * 45) + 1;
+
+      //     i++;
+
+      //       console.log(x);
+
+      //2번문제
+
+      //   while (i < 100) {
+      //     while (j <= i) {
+      //       if (i % j == 0) {
+      //       }
+      //       j++;
+      //     }
+      //     console.log(j == 2);
+      //     i++;
+      //   }
+      //문제 1
+      // let x = 12;
+      // for (let i = 1; i <= x; i++) {
+      //   if (x % i == 0) {
+      //     console.log("ex", i);
+      //   }
+      // }
+
+      // //문제 2
+      // let count = 0;
+      // for (let i = 1; i < 10; i++) {
+      //   if (7 % i == 0) {
+      //     //다시한번 더 보자 if문은 참일때만 실행된다.
+      //     console.log(i);
+      //     count++;
+      //   }
+      // }
+      // if (count == 2) {
+      //   console.log("正");
+      // } else {
+      //   console.log("否");
+      // }
+      // 문제 4 숫자 야구 게임
+      //
+      let strike = 0;
+      let ball = 0;
+      let pitch_count = 0;
+      while (true) {
+        let pitch = Math.floor(Math.random() * 100) + 1;
+
+        if (pitch <= 70) {
+          console.log("strike");
+          strike++;
+        } else {
+          console.log("ball");
+          ball++;
+        }
+        pitch_count++;
+        if (strike == 3) {
+          console.log(
+            `나이스 피치!${pitch_count} 번 던져서! 볼:${ball}회 스트라이크:${strike}회 삼진아웃! `
+          );
+          break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

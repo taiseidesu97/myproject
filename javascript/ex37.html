@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      for (let i = 0; i < 1000; i++) {
+        let num = Math.floor(Math.random() * 100) + 1;    
+        if (num > 50) {
+          console.log("그수는" + num);
+          break;
+        }
+      }
+      let sum = 0;
+      let count = 0;
+      for (let i = 0; i < 1000; i++) {
+        let num = Math.floor(Math.random() * 100) + 1;
+        sum = sum + num;
+        count = count + 1;
+        if (sum > 500) {
+          break;
+        }
+      }
+      console.log("횟수" + count);
+
+      console.log("총합" + sum);
+    </script>
+  </head>
+  <body></body>
+</html>

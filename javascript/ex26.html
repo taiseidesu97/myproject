@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 switch case 문</title>
+    <script>
+      // 조건문 - switch case문
+      // 형식
+      // switch( 변수 ){
+      //  case 값1:
+      //      변수 === 값1 같을 때 수행하는 수행문;
+      //       break;
+      //   case 값2:
+      //      변수 === 값2 같을 때 수행하는 문;
+      //       break;
+      //    default:
+      //      그외의 경우에 수행하는 수행문;
+      //      break;
+      //
+      // break문: switch문을 종료하고 수행하는 수행문;
+      // ==과 ===의 차이점
+      let num = 10;
+      let str = "10";
+      console.log(num == str);
+      console.log(num === str);
+
+      //
+      // 데이터 타입을 정적 타입으로 설정하는 Super set 언어가 타입스크립트이다.
+      // 타입스크립트가 인기 좋음
+      let myNum = 20;
+      switch (myNum) {
+        case 10:
+          console.log("10입니다");
+
+          break;
+        case 5 * 4:
+          console.log("20입니다");
+          break;
+        default:
+          console.log("그 외의 수입니다");
+          break;
+      }
+      if (myNum === 10) {
+        console.log("10정답입니다");
+      } else if (myNum === 20) {
+        console.log("20정답입니다");
+      } else {
+        console.log("그외의 수입니다");
+      }
+
+      let season = "겨울";
+
+      switch (season) {
+        case "봄":
+          console.log("봄이왔어요");
+
+          break;
+        case "여름":
+          console.log("여름이왔어요");
+
+          break;
+        case "가을":
+          console.log("가을이왔어요");
+
+          break;
+        case "겨울":
+          console.log("겨울이왔어요");
+
+          break;
+        default:
+          break;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

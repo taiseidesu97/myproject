@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문의 중단, 우회</title>
+    <script>
+      //break문 : 반복문을 중단하고, 반복문의 끝에서 시작
+      //continue문: 해당 회차(Loop)을 중단하고, 증감문으로 가서 시작
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+        if (i > 5) {
+          break;
+        }
+      }
+
+      for(let i = 0; i<10; i++){
+        if(i%2==0){
+            continue;
+        }
+        console.log();
+        
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

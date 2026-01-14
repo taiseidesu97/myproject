@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>연습문제</title>
+    <script>
+      //1. 비교연산자 : < <= > >= == !=
+      //  1) 20은 30보다 작은지 true/false로 출력하시오.
+      //  2) 20은 30보다 같거나 작은지 true/false로 출력하시오.
+      let num1 = 20;
+      let num2 = 30;
+      let num3 = 10;
+      console.log(num1 < num2); //true
+      console.log(num1 > num2); //false
+      console.log(num1 <= num2); //true
+      console.log(num1 >= num2); //false
+
+      //2. 논리연산자 : AND OR NOT
+      //    다음 로직의 결과를 true/false로 출력하시오.
+      //  1) 10은 20보다 작으면서(~이고), 10은 5보다 큰가?
+      console.log(num3 < num1 && num3 > 5); //true
+      //  2) 123의 일의 자릿수는 3인가?
+      console.log(123 - 120 == 3); //true
+      console.log(123 - 120); //3
+      console.log(123 % 10); //3
+      //  3) 5는 1보다 크거나 10보다 작은가?
+      console.log(5 > 1 || 5 < num3); //true
+
+      //3. prompt함수로
+      //  백의 자리, 십의 자리, 일의 자리 숫자 3개를 입력받고
+      //  그 숫자를 출력하시오.
+      let num100 = prompt("백의 자릿수"); //3
+      let num10 = prompt("백의 자릿수"); //2
+      let nu1 = prompt("백의 자릿수"); //5
+      console.log(num100 + num10 + nu1); //325
+    </script>
+  </head>
+  <body></body>
+</html>

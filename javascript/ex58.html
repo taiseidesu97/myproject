@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex57.html -->
+    <script>
+      //괄호 정리
+      //소괄호 ( ) : 함수 function myfunc(){}, ()=>{} 조건문 if(){} switch(){}
+      //             반복문 for() while() do-while()
+      //중괄호 { } : 함수본체{}-코드의 시작과 끝, 조건문{},반복문{}
+      //             KV객체선언{}
+      //대괄호 [ ] : 배열 let arr=[10,20,30], arr[0],
+      //             KV객체 데이터참조 kv_obj['key']
+
+      //객체 - 자바(클래스->객체), JS(KV-객체, 배열)
+      //키-밸류(Key-Value) 객체
+      //  : key와 값의 쌍으로 이루어진 자료구조이다. 엄청 자주!
+      //  : key는 반드시 문자열형식, value는 다양한 타입 가능.
+      let kv_obj = { apple: 1000, banana: 2000 };
+      // HTTP통신 응답은 3가지 종류이다. html, json, xml, file, stream
+      // json데이터와 1:1 매칭해주는 데이터 구조가 kv객체이다.(자바 map)
+
+      //pc통신 프로토콜(HTTP(web),socket(채팅,게임)이메일,파일전송,원격접속)...
+      //프론트엔드(WB(html,js),app)<--http-->백엔드(server)
+      //                                  html,json
+      //js kv객체
+
+      console.log(kv_obj["apple"]);
+      console.log(kv_obj["banana"]);
+      console.log(kv_obj.apple);
+      console.log(kv_obj.banana);
+      //KV객체의 밸류(배열)에는 다양한 타입을 넣을 수 있다.
+      // 익명함수(함수형변수)를 밸류로 넣어보자
+
+      let person = {
+        name: "홍길동", //변수 - 속성
+        //action: function(){}
+        action: () => {
+          //메소드(함수)-행동
+          console.log("액션시작");
+        },
+      };
+      console.log(person.name);
+      console.log(person.action());
+
+      //다양한 타입으로 객체를 선언
+      let toy = {
+        name: "マジンガーＺ",
+        price: 1000,
+        lang: "한국어",
+        color: "white&black",
+      };
+      //KV객체순회
+      //for in 문:key를 가져온다
+      for (let key in toy) {
+        console.log(key);
+        console.log(toy[key]);
+      }
+      //for of 문:key,value 둘다 가져온다
+      for (let [key, value] of Object.entries(toy)) {
+        console.log(key, value);
+      }
+      //연습문제
+      // student KV객체를 선언하고,
+      // 이 학생의 국어, 영어, 수학 성적을 각각 70, 80,90으로 설정하고,
+      // 합산과 평균을 내는 익명함수를 각각 sum, avr로 설정하고,
+      // 익명함수를 통해, sum과 avr값을 출력하시오.
+      //그리고 국어,영어,수학 점수도 각각 출력하시오.
+      let student = {
+        korean: 70,
+        english: 80,
+        math: 90,
+      };
+      let sum = () => {
+        return student.korean + student.english + student.math;
+      };
+      let avr = () => {
+        return (student.korean + student.english + student.math) / 3;
+      };
+      console.log("합산", sum());
+      console.log("평균", avr());
+      console.log("국어", student.korean);
+      console.log("영어", student.english);
+      console.log("수학", student.math);
+    </script>
+  </head>
+</html>
+  

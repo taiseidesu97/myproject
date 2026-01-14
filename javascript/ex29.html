@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch문의 변칙적 사용</title>
+    <script>
+      //switch문의 변칙적 사용
+      //brake문을 생략하면, 아래 case문과 함께 적용된다.
+      //fall-through(break생략)
+      //   let weekday = prompt("날짜를 입력하세요");
+      //   switch (weekday) {
+      //     case "토":
+      //     case "일":
+      //       console.log("주말");
+      //       break;
+      //     default:
+      //       console.log("평일");
+      //       break;
+      //   }
+      let season = Math.floor(Math.random() * 12) + 1;
+      console.log(season);
+
+      switch (Math.floor(season)) {
+        case 12:
+        case 1:
+        case 2:
+          console.log("冬");
+        
+        case 3:
+        case 4:
+        case 5:
+          console.log("春");
+       
+        case 6:
+        case 7:
+        case 8:
+          console.log("夏");
+     
+        case 9:
+        case 10:
+        case 11:
+          console.log("秋");
+         
+      }
+      //연수
+    </script>
+  </head>
+  <body></body>
+</html>
