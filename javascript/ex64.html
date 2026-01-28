@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex64 -->
+    <script>
+      // 연습문제
+      //1번
+      const users = [
+        { id: 1, name: "Alice", age: 25 },
+        { id: 2, name: "Bob", age: 30 },
+        { id: 3, name: "Charlie", age: 35 },
+      ];
+      //   users.array.forEach((item[name]) => {
+      //     console.log(item[name]);
+      //     return item[name];
+      //   });
+      let name = users.map((user) => user.name);
+      console.log(name);
+
+      // 1번 문제 답안
+      const names = users.map((user) => {
+        return user.name;
+      });
+      console.log(names);
+      // 각 사용자의 이름만 추출한 배열을 생성하세요.
+      // 출력결과 :  ["Alice", "Bob", "Charlie"]
+      //2번
+      const prices = [100, 200, 300];
+      let tax = prices.map((prices) => {
+        return Math.floor(prices * 1.1);
+      });
+
+      console.log(tax);
+
+      // 각 가격에 10%의 세금을 추가한 배열을 생성하세요.
+      // 출력결과 : [110, 220, 330]
+      //3번
+      // 각 숫자를 제곱한 1차원 배열을 만드세요.
+      //출력결과 : [1, 4, 9, 16, 25, 36, 49, 64, 81]
+      //힌트 : map함수 안에서 map함수 사용하기
+      const matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      let fuxk = matrix.map((item) => {
+        return item.map((item) => {
+          return item ** 2;
+        });
+      });
+
+      console.log(fuxk);
+      //3번 미완성
+
+      //3번 답안
+      let squared = matrix.map((row) => {
+        let arr = row.map((num) => {
+          return num * num;
+        });
+        return arr;
+      });
+      console.log(squared);
+      // reduce함수로 평탄화
+      const result = squared.reduce((acc, cur) => {
+        return acc.concat(cur);
+      }, []);
+      console.log(result);
+
+      //flat함수 -평탄화함수
+      let squared2 = matrix
+        .map((row) => {
+          return row.map((num) => {
+            return num * num;
+          });
+        })
+        .flat();
+      console.log(squared2);
+
+      //4번 문제
+      //   const orders = [
+      //     { id: 1, items: [10, 20, 30] },
+      //     { id: 2, items: [5, 15] },
+      //     { id: 3, items: [100, 200] },
+      //   ];
+      //   let zetta = orders.map(orders) => {
+      //     let
+      //     }
+      //   console.log(zetta);
+    </script>
+  </head>
+</html>

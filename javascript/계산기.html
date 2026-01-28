@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>연습문제 - 계산기 프로그램</title>
+    <style>
+      .button {
+        background-color: #286cd1;
+        border: none;
+        width: 300px;
+        margin: 5px 0px;
+        color: white;
+        height: 35px;
+      }
+      .button:last-child {
+        background-color: red;
+      }
+      .insert {
+        background-color: #d8d5d5;
+        height: 40px;
+        margin: 15px 10px;
+        width: 200px;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid black;
+        text-align: center;
+      }
+      #result {
+        background-color: #707070;
+        height: 40px;
+        margin: 15px 15px;
+        width: 200px;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="display: flex; justify-content: center; margin-top: 50px"
+      id="container"
+    >
+      <div
+        style="
+          width: 600px;
+          height: 800px;
+          border: 1px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        "
+      >
+        <h2 style="text-align: center">JavaScript</h2>
+        <h3 style="text-align: center">계산기 프로그램을 작성해보자</h3>
+        <div
+          style="
+            display: flex;
+            width: 300px;
+            justify-content: space-between;
+            flex-direction: column;
+          "
+        >
+          <label
+            >숫자 1<input type="text" id="num1" value="" class="insert"
+          /></label>
+          <label
+            >숫자 2<input type="text" id="num2" value="" class="insert"
+          /></label>
+          <label
+            >연산 결과<input
+              type="text"
+              disabled="disabled"
+              id="result"
+              value=""
+          /></label>
+        </div>
+        <button class="button" onclick="sum()">덧셈</button>
+        <button class="button" onclick="minus()">뺄셈</button>
+        <button class="button" onclick="mul()">곱셈</button>
+        <button class="button" onclick="divi()">나눗셈</button>
+        <button class="button" onclick="clearall()">지우기</button>
+      </div>
+    </div>
+    <script>
+      //input 태그의 value가져오기
+
+      function sum() {
+        let num1_value = document.getElementById("num1").value;
+
+        console.log(num1_value);
+        let num2_value = document.getElementById("num2").value;
+
+        console.log(num2_value);
+        //input 태그의 value설정하기
+        let result = document.getElementById("result");
+        result.value = Number(num1_value) + Number(num2_value);
+      }
+      function minus() {
+        let num1_value = document.getElementById("num1").value;
+
+        console.log(num1_value);
+        let num2_value = document.getElementById("num2").value;
+
+        console.log(num2_value);
+        //input 태그의 value설정하기
+        let result = document.getElementById("result");
+        result.value = Number(num1_value) - Number(num2_value);
+      }
+      function mul() {
+        let num1_value = document.getElementById("num1").value;
+
+        console.log(num1_value);
+        let num2_value = document.getElementById("num2").value;
+
+        console.log(num2_value);
+        //input 태그의 value설정하기
+        let result = document.getElementById("result");
+        result.value = Number(num1_value) * Number(num2_value);
+      }
+      function divi() {
+        let num1_value = document.getElementById("num1").value;
+
+        console.log(num1_value);
+        let num2_value = document.getElementById("num2").value;
+
+        console.log(num2_value);
+        //input 태그의 value설정하기
+        let result = document.getElementById("result");
+        result.value = Number(num1_value) / Number(num2_value);
+      }
+      function clearall() {
+        let num1_value = document.getElementById("num1").value;
+        let num2_value = document.getElementById("num2").value;
+        let result = document.getElementById("result");
+        result.value = "";
+      }
+    </script>
+  </body>
+</html>

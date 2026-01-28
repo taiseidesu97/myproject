@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let score = "97 86 75 66 55 97 85 97 97 95";
+      let arr = new Array(101);
+      for (let i = 0; i <= 100; i++) {
+        arr[i] = 0;
+      }
+      console.log(arr);
+
+      score
+        .split(" ")
+        .map(Number)
+        .forEach((item) => {
+          arr[item] += 1;
+        });
+      // 97 86과 같은 데이터를 배열의 인덱스로 사용하고,
+      // 카운트를 센다.
+
+      //등수 카운트
+      let count_candy = 0; // 사탕을 줄 사람의 수
+      let countdown = 3; // 3등까지만 센다.
+      for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] > 0) {
+          count_candy += arr[i];
+          countdown--;
+        }
+        if (countdown == 0) {
+          // 3등까지 다 셋다.
+          break;
+        }
+      }
+
+      console.log(arr);
+      console.log("사탕 줄 사람 수", count_candy);
+      //해결법
+    </script>
+  </head>
+  <body></body>
+</html>

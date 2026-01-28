@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대소문자 바꿔서 출력하기</title>
+    <script>
+      let str1 = prompt("");
+      let str2 = prompt("");
+      //해결책
+      //1. charCodeAt 아스키 모드 값 이용
+      let result = "";
+      for (let i = 0; i < str1.length; i++) {
+        if (str1.charCodeAt(i) < "a".charCodeAt(0)) {
+          result += String.fromCharCode(str1.charCodeAt(i) + 32);
+        } else {
+          result += String.fromCharCode(str1.charCodeAt(i) - 32);
+        }
+      }
+      console.log(result);
+
+      //2. toLowerCase,toUpperCase
+      result = "";
+      for (let char of str2) {
+        //영문자가 소문와 같냐?
+        if (char == char.toUpperCase()) {
+          result += char.toLowerCase();
+        } else {
+          result += char.toUpperCase();
+        }
+      }
+      console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>

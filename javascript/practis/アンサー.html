@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또번호</title>
+    <script>
+      let answer_num = [];
+      let lotto_arr = [];
+      let count = 0;
+      for (let i = 0; i < 7; i++) {
+        let answer = Math.floor(Math.random() * 10) + 1;
+        answer_num.push(answer);
+
+        for (let j = 1; j < 7; j++) {
+          let lotto = Math.floor(Math.random() * 10) + 1;
+          lotto_arr.push(lotto);
+        }
+        if (answer_num.length == lotto_arr.length) {
+          count++;
+        }
+        if (count == 6) {
+          console.log("1등");
+          break;
+        } else if (count == 5) {
+          console.log("2등");
+          break;
+        } else if (count == 4) {
+          console.log("3등");
+          break;
+        } else if (count == 3) {
+          console.log("4등");
+          break;
+        } else {
+          console.log(lotto_arr, answer_num);
+
+          console.log("꽝");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

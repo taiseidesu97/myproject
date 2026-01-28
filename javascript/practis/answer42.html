@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>각자리수의 합 -2</title>
+    <script>
+      let arr = []; //빈 배열 작성
+      let sum = 0; //반복문을 거쳐 모든 합산의 수 작성
+
+      for (let i = 0; i < 20; i++) {
+        arr[i] = i + 1; // arr빈배열값에 0~19 까지 넣지만 +1을 넣어서 1~20까지 들어감
+      }
+
+      for (let i = 0; i < arr.length; i++) { // 이번엔 연산을 할 횟수를 설정
+        let n = arr[i]; // 원래 배열의 값을 건들이지 않고 arr[]의 복사본을 하나 만드는 느낌 
+        while (n !== 0) {
+          sum += n % 10; // 1~9 까지는 어차피 10으로 나눠봤자 그대로 들어감
+          n = Math.floor(n / 10); // 11 / 10 =1.1 math.floor로 소숫점 날리기
+        }
+      }
+
+      console.log(sum);
+    </script>
+  </head>
+  <body></body>
+</html>

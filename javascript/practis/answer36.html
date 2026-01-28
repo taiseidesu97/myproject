@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>꽃이름을 말해주세요 - 배열의 foreach함수</title>
     <script>
+      // let names = ["장미", "수선화", "코스모스"];
+      // names.forEach(function (value) {});
+      // console.log(names);
+      // for (let value of names) {
+      //   if (value.length == 4) {
+      //     console.log("가장 긴 이름" + value);
+      //   }
+      // }
+      //
+
+      //답안
       let names = ["장미", "수선화", "코스모스"];
-      names.forEach(function (value) {});
-      console.log(names);
-      for (let value of -names) {
-        if (value.length == 4) {
-          console.log("가장 긴 이름" + value);
+      let max = 0;
+      let max_name = "";
+      for (let name of names) {
+        if (name.length > max) {
+          max = name.length;
+          max_name = name;
         }
       }
+      console.log(max);
+      console.log(max_name);
     </script>
   </head>
   <body></body>
